@@ -13,3 +13,6 @@ window.addEventListener("keydown", function(e){
 
 })
 
+const trap = document.getElementById("trap");
+trap.classList.add("fail");
+
