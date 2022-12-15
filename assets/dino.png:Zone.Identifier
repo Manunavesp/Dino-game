@@ -1,4 +1,9 @@
 [ZoneTransfer]
 ZoneId=3
+<<<<<<< HEAD
 ReferrerUrl=https://www.google.com/
 HostUrl=https://geekanant.gallerycdn.vsassets.io/extensions/geekanant/chrome-dinosaur-game/0.0.1/1638086697139/Microsoft.VisualStudio.Services.Icons.Default
+=======
+ReferrerUrl=https://raw.githubusercontent.com/GemukiDev/dinosaurio_chrome/master/img/dino.png
+HostUrl=https://raw.githubusercontent.com/GemukiDev/dinosaurio_chrome/master/img/dino.png
+>>>>>>> 69b05b72e4fea002eda3c0823b0c5d557fdc9a6c
