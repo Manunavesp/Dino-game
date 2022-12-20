@@ -9,7 +9,7 @@ export function Flags () {
     this.speed = 20
     this.flag.style.right = this.posx + "px"
     this.flag.style.bottom = this.posy + "px"
-    this.parent = document.getElementById("ground")   
+    this.parent = document.getElementById("backgroundGame")   
     this.parent.appendChild(this.flag)
     this.timer = setInterval(move, 40, self)    
 }

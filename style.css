@@ -3,7 +3,7 @@ body{
     background-color: black;
 }
 
-.backgroundGame{
+#backgroundGame{
     background: linear-gradient(#129fe5, transparent) #f1efed;
     width: 1400px;
     height: 700px;
@@ -49,7 +49,7 @@ body{
 }
 
 #ground {
-    width: 1400px;
+    width: 2800px;
     height: 60px;
     position: absolute;
     --green: #22c762;
@@ -66,7 +66,8 @@ body{
     position: absolute;
     right: 0;
     background: url(/assets/poland.png);
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;  
+    transition: all 0.1s ease;   
 }
 .australia{
     width: 64px;
@@ -75,7 +76,8 @@ body{
     position: absolute;
     right: 0;
     background: url(/assets/australia.png);
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat; 
+    transition: all 0.1s ease;   
 }    
 .saudi-arabia{
     width: 64px;
@@ -84,7 +86,8 @@ body{
     position: absolute;
     right: 0;
     background: url(/assets/saudi-arabia.png);
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat; 
+    transition: all 0.1s ease;   
 }     
 .croatia{
     width: 64px;
@@ -94,6 +97,7 @@ body{
     right: 0;
     background: url(/assets/croatia.png);
     background-repeat: no-repeat;  
+    transition: all 0.1s ease;   
 }    
 .france{
     width: 64px;
@@ -102,7 +106,8 @@ body{
     position: absolute;
     right: 0;
     background: url(/assets/france.png);
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
+    transition: all 0.1s ease;     
 }    
 .mexico{
     width: 64px;
@@ -111,7 +116,8 @@ body{
     position: absolute;
     right: 0;
     background: url(/assets/mexico.png);
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;   
+    transition: all 0.1s ease;   
 }    
 .netherlands{
     width: 64px;
@@ -121,5 +127,6 @@ body{
     right: 0;
     background: url(/assets/netherlands.png);
     background-repeat: no-repeat;  
+    transition: all 0.1s ease;   
 }    
 
