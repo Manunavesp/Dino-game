@@ -44,7 +44,8 @@ body{
     border: 2px solid blue;
     bottom: 25px;
     left: 40px;
-    background: url(./assets/messi-2.png);    
+    background: url(./assets/messi-2.png); 
+    transition: all 0.1s ease;   
 }
 
 #ground {

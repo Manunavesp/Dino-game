@@ -6,18 +6,21 @@ export function Player (){
     this.jumping = false
     
     this.jump = function (){
-    if (this.jumping === true && this.speed >= 0.1){
-        this.posy += this.speed
-        this.speed -=  this.speed * 0.5
-        this.player.style.bottom = this.posy + "px"
-    } 
-    else if (this.onFloor() === false) {
-        this.posy -= 20
-        this.player.style.bottom = this.posy + "px"
-    } 
-    else {
-        this.speed = 100 
-        this.jumping = false
+        if (this.jumping === true && this.speed >= 0.1){
+            this.posy += this.speed
+            this.speed -=  this.speed * 0.5
+            this.player.style.bottom = this.posy + "px"
+        } 
+        else if (this.onFloor() === false) {
+            this.posy -= 20
+            this.player.style.bottom = this.posy + "px"
+        } 
+        else {
+            this.posy = 25
+            this.player.style.bottom = this.posy + "px" 
+            this.speed = 100 
+            this.jumping = false
+        }
     }
 
     this.onFloor = function(){  
@@ -27,6 +30,6 @@ export function Player (){
         else {
             return true
         }
-    }}
+    }
 }
 

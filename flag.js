@@ -10,6 +10,7 @@ export function Flags () {
     this.flag.style.right = this.posx + "px"
     this.flag.style.bottom = this.posy + "px"
     this.parent = document.getElementById("ground")   
+    this.parent.appendChild(this.flag)
     this.timer = setInterval(move, 40, self)    
 }
 
@@ -19,8 +20,7 @@ function move (bandera){
     bandera.flag.style.right = bandera.posx + "px"
     if (bandera.posx >= 1400){
         bandera.parent.removeChild(bandera.flag)
-    } else {
-        bandera.parent.appendChild(bandera.flag)
+        clearInterval(bandera.timer)
     }
 }
   
