@@ -1,18 +1,26 @@
-const dino = document.getElementById("dino");
+import {Player} from "./messi.js"
+import {Flags} from "./flag.js"
 
 
-window.addEventListener("keydown", function(e){
-    console.log(dino.classList.contains("jump"));
-    if (e.key === "ArrowUp" && dino.classList.contains("jump") === false){
-        dino.classList.add("jump");
-        setTimeout(function(){
-            dino.classList.remove("jump");
-        },500)
-        
-    }
+var player = new Player()    //messi creado//
 
-})
 
-const trap = document.getElementById("trap");
-trap.classList.add("fail");
+function game(){
+    window.addEventListener("keydown", function (e){
+        if ( e.key === "ArrowUp"){
+           if (player.jumping === false){
+            player.jumping = true
+           }
+        }
+      })
 
+      var timer = setInterval(function (){
+        player.jump()
+      },22)
+      
+      var flagtimer = setInterval(function(){
+         new Flags()
+      },1000) 
+}
+
+game()
