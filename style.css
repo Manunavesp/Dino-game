@@ -24,7 +24,7 @@ body{
     font-family: 'Bungee', cursive;
 }
 
-#contador{
+#divCounter{
     position: absolute;
     top: 30%;
     left: 50%;
@@ -41,7 +41,6 @@ body{
     width: 62px;
     height: 60px;
     position: absolute;
-    border: 2px solid blue;
     bottom: 25px;
     left: 40px;
     background: url(./assets/messi-2.png); 
@@ -62,9 +61,7 @@ body{
 .poland{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/poland.png);
     background-repeat: no-repeat;  
     transition: all 0.1s ease;   
@@ -72,9 +69,7 @@ body{
 .australia{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/australia.png);
     background-repeat: no-repeat; 
     transition: all 0.1s ease;   
@@ -82,9 +77,7 @@ body{
 .saudi-arabia{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/saudi-arabia.png);
     background-repeat: no-repeat; 
     transition: all 0.1s ease;   
@@ -92,9 +85,7 @@ body{
 .croatia{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/croatia.png);
     background-repeat: no-repeat;  
     transition: all 0.1s ease;   
@@ -102,9 +93,7 @@ body{
 .france{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/france.png);
     background-repeat: no-repeat;
     transition: all 0.1s ease;     
@@ -112,9 +101,7 @@ body{
 .mexico{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/mexico.png);
     background-repeat: no-repeat;   
     transition: all 0.1s ease;   
@@ -122,9 +109,7 @@ body{
 .netherlands{
     width: 64px;
     height: 64px;
-    border: 2px solid black;
     position: absolute;
-    right: 0;
     background: url(/assets/netherlands.png);
     background-repeat: no-repeat;  
     transition: all 0.1s ease;   

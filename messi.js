@@ -1,10 +1,9 @@
-export function Player (){
+export function Player(){
     this.player = document.getElementById("messi")
     this.posx = 40
     this.posy = 25
     this.speed = 100  //jump speed
     this.jumping = false
-    
     this.jump = function (){
         if (this.jumping === true && this.speed >= 0.1){
             this.posy += this.speed
