@@ -1,5 +1,5 @@
 let counter = 0;
-export function Ground() {
+export function Ground(player) {
     var self = this
     var groundDuration = 3000
     this.ground = document.getElementById("ground")
@@ -7,11 +7,11 @@ export function Ground() {
     this.posy = 0
     this.speed = 20 + counter
     this.timer = setInterval(move, 40, self)
+    this.player = player
 
     groundDuration = (20 * 3000) / this.speed; //rule of 3 to decrease groundDuration time
     setTimeout(() => {
         counter += 1;
-        document.getElementById('score').innerHTML = counter;
         console.log(counter);
     }, groundDuration);
     
@@ -19,11 +19,16 @@ export function Ground() {
 
 
 function move(suelo) {
-    if (suelo.posx <= -1400) {
-        suelo.posx = 0
-    } else {
-        suelo.posx -= suelo.speed
+    if (suelo.player.checkDead === false){
+        if (suelo.posx <= -1400) {
+            suelo.posx = 0
+        } else {
+            suelo.posx -= suelo.speed
+        }
+        suelo.ground.style.left = suelo.posx + "px"
     }
-    suelo.ground.style.left = suelo.posx + "px"
+    else {
+        clearInterval(suelo.timer)
+    }
 }
 

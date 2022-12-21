@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     background-color: black;
+    user-select: none;
 }
 
 #backgroundGame{
@@ -24,12 +25,51 @@ body{
     font-family: 'Bungee', cursive;
 }
 
+#button{
+    position: absolute;
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Coda', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+#button:hover{
+    background-color: black;
+    color: white;
+}
+
+#gameOver{
+    display: none;
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-family: 'Coda', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+#gameOver:hover{
+    background-color: yellow;
+    color: black;
+}
+
 #divCounter{
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     font-weight: bold;

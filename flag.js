@@ -1,5 +1,4 @@
-var counter = 0;
-export function Flags(player, score) {
+export function Flags(player, counter) {
     var flagArray = ["poland", "australia", "saudi-arabia", "netherlands", "france", "croatia", "mexico"];
     var random = Math.floor(Math.random() * flagArray.length);
     var self = this
@@ -15,32 +14,41 @@ export function Flags(player, score) {
     this.parent.appendChild(this.flag)
     this.timer = setInterval(move, 40, self)
     this.player = player
-
+    this.counter = counter
 
     this.collision = function () {
 
         if (this.player.posx + 62 >= this.posx && this.player.posy <= this.posy + 64 && this.player.posx <= this.posx + 64) {
-            alert("Game over")
+            this.player.checkDead = true 
+
+            clearInterval(this.timer)
+            clearTimeout(this.timeoutTimer)
         }
     }
     flagDuration = (20 * 3000) / this.speed; //rule of 3 to decrease flagDuration time
-    setTimeout(() => {
+    this.timeoutTimer = setTimeout(() => {
 
-        counter += 1;
-        document.getElementById('score').innerHTML = counter
+        this.counter += 1;
+        document.getElementById('score').innerHTML = this.counter
 
     }, flagDuration)
 
 }
 
 function move(bandera) {
-    bandera.posx -= bandera.speed
-    bandera.flag.style.left = bandera.posx + "px"
-    if (bandera.posx <= 0) {
-        bandera.parent.removeChild(bandera.flag)
-        clearInterval(bandera.timer)
+    if (bandera.player.checkDead === false){
+        bandera.posx -= bandera.speed
+        bandera.flag.style.left = bandera.posx + "px"
+        if (bandera.posx + 64 <= 0) {
+            bandera.parent.removeChild(bandera.flag)
+            clearInterval(bandera.timer)
+        }
+        bandera.collision()
     }
-    bandera.collision()
+    else {
+        clearInterval(bandera.timer)
+        clearTimeout(bandera.timeoutTimer);
+    }
 }
 
 

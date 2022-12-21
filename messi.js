@@ -4,6 +4,7 @@ export function Player(){
     this.posy = 25
     this.speed = 100  //jump speed
     this.jumping = false
+    this.checkDead = false
     this.jump = function (){
         if (this.jumping === true && this.speed >= 0.1){
             this.posy += this.speed
