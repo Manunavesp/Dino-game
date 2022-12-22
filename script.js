@@ -64,9 +64,18 @@ button2.addEventListener("click", function () {
 })
 
 function randomFlag() {
-    new Flags(player, counter)
+    var flag = new Flags(player, counter)
+    flag.timeoutTimer = setTimeout(() => {
+       
+        if (player.checkDead === false){
+            counter += 1;
+            document.getElementById('score').innerHTML = counter
+            console.log(counter)
+        }
+        clearTimeout(flag.timeoutTimer)
+    }, flag.flagDuration)
+
     randomNumber = Math.floor(Math.random() * (2000 - 475 + 1)) + 475
-    console.log(randomNumber)
     clearInterval(flagtimer)
     flagtimer = null;
     

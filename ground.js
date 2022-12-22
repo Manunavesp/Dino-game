@@ -1,18 +1,18 @@
-let counter = 0;
+let groundCounter = 0;
 export function Ground(player) {
     var self = this
     var groundDuration = 3000
     this.ground = document.getElementById("ground")
     this.posx = 0
     this.posy = 0
-    this.speed = 20 + counter
+    this.speed = 20 + groundCounter
     this.timer = setInterval(move, 40, self)
     this.player = player
 
     groundDuration = (20 * 3000) / this.speed; //rule of 3 to decrease groundDuration time
     setTimeout(() => {
-        counter += 1;
-        console.log(counter);
+        groundCounter += 1;
+        console.log(groundCounter);
     }, groundDuration);
     
 }
