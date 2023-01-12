@@ -3,6 +3,7 @@ import { Flags } from "./flag.js"
 import { Ground } from "./ground.js"
 
 var counter = 0
+var timer;
 var button = document.getElementById("button")
 var button2 = document.getElementById("gameOver")
 var messi = document.getElementById("messi")
@@ -31,20 +32,22 @@ function game() {
         }
     })
 
-    var timer = setInterval(function () {
+    timer = setInterval(function () {
         player.jump()
-        if (!flagtimer) {
-            flagtimer = setInterval(randomFlag, randomNumber)
-        }
-
         if (player.checkDead === true) {
             button2.style.display = "block"
             title.style.display = "none"
             clearInterval(flagtimer)
             flagtimer = null;
             clearInterval(timer)
+            console.log(timer,flagtimer)
+            return
 
         }
+        if (!flagtimer) {
+            flagtimer = setInterval(randomFlag, randomNumber)
+        }
+
     }, 22)
 
 }
@@ -58,8 +61,11 @@ button2.addEventListener("click", function () {
     player.checkDead = false
     button2.style.display = "none"
     counter = 0
-    document.getElementById('score').innerHTML = counter
-
+    document.getElementById('score').innerText = counter
+    console.log("Hola");
+    if (timer){
+        clearInterval(timer)
+    }
     game()
 })
 
@@ -69,8 +75,7 @@ function randomFlag() {
        
         if (player.checkDead === false){
             counter += 1;
-            document.getElementById('score').innerHTML = counter
-            console.log(counter)
+            document.getElementById('score').innerText = counter
         }
         clearTimeout(flag.timeoutTimer)
     }, flag.flagDuration)

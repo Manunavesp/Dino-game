@@ -102,7 +102,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/poland.png);
+    background: url(./assets/poland.png);
     background-repeat: no-repeat;  
     transition: all 0.1s ease;   
 }
@@ -110,7 +110,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/australia.png);
+    background: url(./assets/australia.png);
     background-repeat: no-repeat; 
     transition: all 0.1s ease;   
 }    
@@ -118,7 +118,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/saudi-arabia.png);
+    background: url(./assets/saudi-arabia.png);
     background-repeat: no-repeat; 
     transition: all 0.1s ease;   
 }     
@@ -126,7 +126,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/croatia.png);
+    background: url(./assets/croatia.png);
     background-repeat: no-repeat;  
     transition: all 0.1s ease;   
 }    
@@ -134,7 +134,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/france.png);
+    background: url(./assets/france.png);
     background-repeat: no-repeat;
     transition: all 0.1s ease;     
 }    
@@ -142,7 +142,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/mexico.png);
+    background: url(./assets/mexico.png);
     background-repeat: no-repeat;   
     transition: all 0.1s ease;   
 }    
@@ -150,7 +150,7 @@ body{
     width: 64px;
     height: 64px;
     position: absolute;
-    background: url(/assets/netherlands.png);
+    background: url(./assets/netherlands.png);
     background-repeat: no-repeat;  
     transition: all 0.1s ease;   
 }    

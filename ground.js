@@ -12,7 +12,6 @@ export function Ground(player) {
     groundDuration = (20 * 3000) / this.speed; //rule of 3 to decrease groundDuration time
     setTimeout(() => {
         groundCounter += 1;
-        console.log(groundCounter);
     }, groundDuration);
     
 }
